@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeliseExamApp.Web", "SeliseExamApp.Web\SeliseExamApp.Web.csproj", "{C64DC0A8-EABE-44EB-92AD-9CFDB68954EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeliseExamApp.DataAccess", "SeliseExamApp.DataAccess\SeliseExamApp.DataAccess.csproj", "{2CD0D27C-1C6A-4251-A3BE-9813CD263C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeliseExamApp.Core", "SeliseExamApp.Core\SeliseExamApp.Core.csproj", "{1BF71C42-A3B9-46E4-90A3-3949F34F8A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeliseExamApp.Test", "SeliseExamApp.Test\SeliseExamApp.Test.csproj", "{3ADF936C-A650-439A-A126-FC8423938213}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{C64DC0A8-EABE-44EB-92AD-9CFDB68954EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C64DC0A8-EABE-44EB-92AD-9CFDB68954EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C64DC0A8-EABE-44EB-92AD-9CFDB68954EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD0D27C-1C6A-4251-A3BE-9813CD263C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD0D27C-1C6A-4251-A3BE-9813CD263C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD0D27C-1C6A-4251-A3BE-9813CD263C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD0D27C-1C6A-4251-A3BE-9813CD263C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF71C42-A3B9-46E4-90A3-3949F34F8A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF71C42-A3B9-46E4-90A3-3949F34F8A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF71C42-A3B9-46E4-90A3-3949F34F8A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF71C42-A3B9-46E4-90A3-3949F34F8A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADF936C-A650-439A-A126-FC8423938213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADF936C-A650-439A-A126-FC8423938213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADF936C-A650-439A-A126-FC8423938213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADF936C-A650-439A-A126-FC8423938213}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

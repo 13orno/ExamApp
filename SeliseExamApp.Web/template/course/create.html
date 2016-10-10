@@ -1,0 +1,40 @@
+﻿
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Create Students
+
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+
+        <form name="CourseCreate.userForm" ng-submit="CourseCreate.submitForm()" novalidate>
+            <!-- USERNAME -->
+            <div class="form-group" ng-class="{ 'has-error' : CourseCreate.userForm.name.$invalid && !CourseCreate.userForm.name.$pristine }">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" ng-model="CourseCreate.user.name" ng-minlength="3" ng-maxlength="20">
+                <p ng-show="CourseCreate.userForm.name.$error.minlength" class="help-block">Course Name is too short.</p>
+                <p ng-show="CourseCreate.userForm.name.$error.maxlength" class="help-block">Course Name is too long.</p>
+            </div>
+
+            <!-- PHONE -->
+            <div class="form-group" ng-class="{ 'has-error' : CourseCreate.userForm.Code.$invalid && !CourseCreate.userForm.Code.$pristine }">
+                <label>Code</label>
+                <input type="text" name="roll" class="form-control" ng-model="CourseCreate.user.Code" ng-minlength="5" ng-maxlength="20" required>
+                <p ng-show="CourseCreate.userForm.Code.$error.minlength" class="help-block">Code is too short.</p>
+                <p ng-show="CourseCreate.userForm.Code.$error.maxlength" class="help-block">Code is too long.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" ng-disabled="CourseCreate.userForm.$invalid">Submit</button>
+
+        </form>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <a href="#/course" class="btn btn-primary pull-right"> Back to List</a>
+    </div>
+</div>

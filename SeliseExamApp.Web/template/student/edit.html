@@ -1,0 +1,57 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Create Students
+
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+
+        <form name="StudentEdit.userForm" ng-submit="StudentEdit.submitForm()" novalidate>
+            <!-- USERNAME -->
+            <div class="form-group" ng-class="{ 'has-error' : StudentEdit.userForm.Name.$invalid && !StudentEdit.userForm.Name.$pristine }">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" ng-model="StudentEdit.user.Name" ng-minlength="3" ng-maxlength="8">
+                <p ng-show="StudentEdit.userForm.Name.$error.minlength" class="help-block">Username is too short.</p>
+                <p ng-show="StudentEdit.userForm.Name.$error.maxlength" class="help-block">Username is too long.</p>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-group" ng-class="{ 'has-error' : StudentEdit.userForm.Email.$invalid && !StudentEdit.userForm.Email.$pristine }">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" ng-model="StudentEdit.user.Email" required>
+                <p ng-show="StudentEdit.userForm.Email.$invalid && !StudentEdit.userForm.Email.$pristine" class="help-block">Enter a valid email.</p>
+            </div>
+
+            <!-- PHONE -->
+            <div class="form-group" ng-class="{ 'has-error' : StudentEdit.userForm.Roll.$invalid && !StudentEdit.userForm.Roll.$pristine }">
+                <label>Roll</label>
+                <input type="text" name="roll" class="form-control" ng-model="StudentEdit.user.Roll" ng-minlength="11" ng-maxlength="20" required>
+                <p ng-show="StudentEdit.userForm.Roll.$error.minlength" class="help-block">Roll is too short.</p>
+                <p ng-show="StudentEdit.userForm.Roll.$error.maxlength" class="help-block">Phone is too long.</p>
+            </div>
+            <input type="hidden" name="Id" class="form-control" ng-model="StudentEdit.user.Id">
+            
+            <!--Course -->
+            <div class="form-group">
+                <label ng-repeat="item in StudentEdit.courses">
+                    <input type="checkbox" ng-checked="StudentEdit.checkItem(item.Id)" name="selectedCourseItem" ng-value="item.value" ng-model="item.selected" ng-change="StudentEdit.selectCourse()" />
+                    <span class="space-margin5">
+                        {{item.Name}}
+                    </span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" ng-disabled="StudentEdit.userForm.$invalid">Submit</button>
+
+        </form>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <a href="#/student" class="btn btn-primary pull-right"> Back to List</a>
+    </div>
+</div>
