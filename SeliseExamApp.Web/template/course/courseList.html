@@ -12,14 +12,19 @@
     <div class="col-lg-12">
         <label>Filter : </label>
         <input ng-model="CourseList.filerData" class="form-control">
-        <table class="table table-hover">
+        <table class="table table-hover" data-ng-switch="CourseList.courses.length">
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Code</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody data-ng-switch-when="0">
+                <tr>
+                    <td colspan="6">No Course exist.</td>
+                </tr>
+            </tbody>
+            <tbody data-ng-switch-default>
                 <tr ng-repeat="student in CourseList.courses | filter : CourseList.filerData">
                     <td>{{student.Name}}</td>
                     <td>{{student.Code}}</td>

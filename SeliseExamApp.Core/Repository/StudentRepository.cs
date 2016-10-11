@@ -51,7 +51,7 @@ namespace SeliseExamApp.Core.Repository
 
         public Student FindByRoll(string roll)
         {
-            var stu= context.Students.Where(s => s.Name == roll).FirstOrDefault();
+            var stu= context.Students.Where(s => s.Roll == roll).FirstOrDefault();
             return stu;
         }
 

@@ -15,7 +15,7 @@
             <!-- USERNAME -->
             <div class="form-group" ng-class="{ 'has-error' : StudentCreate.userForm.name.$invalid && !StudentCreate.userForm.name.$pristine }">
                 <label>Name</label>
-                <input type="text" name="name" class="form-control" ng-model="StudentCreate.user.name" ng-minlength="3" ng-maxlength="8">
+                <input type="text" name="name" class="form-control" ng-model="StudentCreate.user.name" ng-minlength="3" ng-maxlength="25">
                 <p ng-show="StudentCreate.userForm.name.$error.minlength" class="help-block">Username is too short.</p>
                 <p ng-show="StudentCreate.userForm.name.$error.maxlength" class="help-block">Username is too long.</p>
             </div>
@@ -30,7 +30,7 @@
             <!-- PHONE -->
             <div class="form-group" ng-class="{ 'has-error' : StudentCreate.userForm.roll.$invalid && !StudentCreate.userForm.roll.$pristine }">
                 <label>Roll</label>
-                <input type="text" name="roll" class="form-control" ng-model="StudentCreate.user.roll" ng-minlength="11" ng-maxlength="20" required>
+                <input type="text" name="roll" class="form-control" ng-model="StudentCreate.user.roll" ng-minlength="3" ng-maxlength="20" required>
                 <p ng-show="StudentCreate.userForm.roll.$error.minlength" class="help-block">Phone is too short.</p>
                 <p ng-show="StudentCreate.userForm.roll.$error.maxlength" class="help-block">Phone is too long.</p>
             </div>
